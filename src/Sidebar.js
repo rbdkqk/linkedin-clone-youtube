@@ -20,7 +20,7 @@ export default function Sidebar() {
     <div className='sidebar'>
       <div className='sidebar__top'>
         <img
-          src='https://compassionate-leakey-e9b16b.netlify.app/images/IG_Sonny.jpeg'
+          src='https://4kwallpapers.com/images/wallpapers/macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-3840x2160-1455.jpg'
           alt=''
         />
         <Avatar className='sidebar__avatar' src={user.photoUrl}>
