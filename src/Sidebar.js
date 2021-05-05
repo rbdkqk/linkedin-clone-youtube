@@ -1,8 +1,12 @@
 import React from 'react';
 import { Avatar } from '@material-ui/core';
 import './Sidebar.css';
+import { useSelector } from 'react-redux';
+import { selectUser } from './features/userSlice';
 
 export default function Sidebar() {
+  const user = useSelector(selectUser);
+
   const recentItem = (topic) => {
     return (
       <div className='sidebar__recentItem'>
@@ -19,9 +23,11 @@ export default function Sidebar() {
           src='https://compassionate-leakey-e9b16b.netlify.app/images/IG_Sonny.jpeg'
           alt=''
         />
-        <Avatar className='sidebar__avatar' />
-        <h2>Sonny Sangha</h2>
-        <h4>sonny.sangha@gmail.com</h4>
+        <Avatar className='sidebar__avatar' src={user.photoUrl}>
+          {user.email[0]}
+        </Avatar>
+        <h2>{user.displayName}</h2>
+        <h4>{user.email}</h4>
       </div>
       <div className='sidebar__stats'>
         <div className='sidebar__stat'>
